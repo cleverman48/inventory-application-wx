@@ -27,7 +27,6 @@ exports.createUser = (req, res) => {
   // 3- verify the password
   // 4- encrypt the password and save the new user
 
-  // 1- check if the Username is already taken
   // throw a message to the user if so
   function checkUsernameTaken() {
     User.findOne({ username: req.body.username }, (err, userWithSameUsername) => {
